@@ -6,7 +6,7 @@ function App() {
     const [data, setData] = useState<{users:string[]|undefined}>({users:undefined});
 
     useEffect(() =>{
-        fetch('http://localhost:5000/api').then(
+        fetch('/api').then(
             response => {
                 return response.json()
             }
