@@ -1,0 +1,28 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #0078d4; /* Customize the color */
+    padding: 10px 20px;
+    color: white;
+    font-size: 18px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-item {
+    padding: 8px 12px;
+    cursor: pointer;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.file {
+    background-color: #004e8c;
+}
+
+.home {
+    background-color: #0078d4;
+}
+
+.insert {
+    background-color: #009688;
+}
