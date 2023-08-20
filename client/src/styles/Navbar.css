@@ -1,27 +1,43 @@
 /* Navbar.css */
 
 .navbar {
-    display: flex;
+    --navigationMainBackgroundColor:#2c2c2cb3;
+    --navigationMainScndgroundColor:#444444b3;
+    display:grid;
+    grid-template-columns: 200px auto 200px;
+    grid-template-rows: 50px 50px;
     align-items: center;
-    background-color: #b3d4fc;
+    background-color: var(--navigationMainBackgroundColor);
     padding: 10px 20px;
     color: white;
     font-size: 18px;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
     position: relative;
+    z-index: 1;
 }
 
 .navbar-item {
-    padding: 8px 12px;
+    padding: 3px 20px;
     cursor: pointer;
-    transition: background-color 0.2s, color 0.2s;
+    border-radius: 6px;
+    transition: 0.6s;
+    font-weight: 300;
+    min-width: 50px;
+    text-align: center;
+    margin:2px;
 }
 
 .navbar-item:hover {
-    background-color: #eaeaea;
-    color: #333;
+    background-color: #6565657a;
 }
-
+.navbar_items{
+    grid-row-start: 2;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .sections {
     top: 0; /* Position to the right of the components */
     margin-left: 10%;
@@ -31,4 +47,41 @@
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
     z-index: 1; /* Ensure the section appears above other content */
     color: black;
+}
+.nav_renameInput{
+    background-color:var(--navigationMainScndgroundColor);
+    border:0px solid var(--navigationMainScndgroundColor);
+    outline:none;
+    grid-row-start: 1;
+    grid-column-start: 2;
+    width: 80%;
+    justify-self: center;
+    height: 28px;
+    border-radius: 10px;
+    max-width: 300px;
+    text-align: center;
+    color:white;
+    font-family: var(--appBgColor);
+    font-size: 17px;
+    transition: 0.3s all ease-in-out;
+}
+.nav_renameInput:hover , .nav_renameInput:focus{
+    background-color: var(--navigationMainBackgroundColor);
+    border:1px solid var(--navigationMainScndgroundColor);
+}
+.navigationAccountToggle{
+    background-color:var(--navigationMainScndgroundColor);
+    border:none;
+    outline:none;
+    grid-column-start: 3;
+    grid-row: 1 , 2;
+    align-self: center;
+    justify-self: flex-end;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    fill:white;
+    border-radius: 50%;
 }
